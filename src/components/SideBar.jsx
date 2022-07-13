@@ -1,41 +1,50 @@
 import React,{useState} from 'react';
-import {FaTh,FaBars,FaShoppingCart ,FaUserAlt,FaRegChartBar,FaThList,FaCommentAlt} from 'react-icons/fa';
+import {FaTh,FaBars} from 'react-icons/fa';
+import {RiArticleFill,RiFolder4Fill} from 'react-icons/ri';
+import {MdImportExport,MdInventory2} from 'react-icons/md';
+import {GiHistogram} from 'react-icons/gi';
+import {BiImport} from 'react-icons/bi';
 import {NavLink} from 'react-router-dom';
 
 const SideBar = ({children}) => {
-    const[isOpen, setIsopen] = useState(false);
+    const[isOpen, setIsopen] = useState(true);
     const toggle = () =>setIsopen(!isOpen)
     const menuItems=[
         {
             path:'/',
-            name:'Dashboard',
+            name:'Login',
             icon:<FaTh />,
         },
        
         {
-            path:'/about',
-            name:'About',
-            icon:<FaUserAlt />
+            path:'/article',
+            name:'Article',
+            icon:<RiArticleFill />
         },
         {
-            path:'/analytics',
-            name:'analytics',
-            icon:<FaRegChartBar />
+            path:'/dossier',
+            name:'Dossier',
+            icon:<RiFolder4Fill />
         },
         {
-            path:'/comment',
-            name:'Comment',
-            icon:<FaCommentAlt/>
+            path:'/logistique',
+            name:'Logistique',
+            icon:<MdImportExport />
         },
         {
-            path:'/product',
-            name:'Product',
-            icon:<FaShoppingCart/>
+            path:'/fournisseur',
+            name:'Fournisseur',
+            icon:<BiImport />
         },
         {
-            path:'/productList',
-            name:'ProductList',
-            icon:<FaThList/>
+            path:'/inventaire',
+            name:'Inventaire',
+            icon:<MdInventory2 />
+        },
+        {
+            path:'/historique',
+            name:'Historique',
+            icon:<GiHistogram />
         },
         
     ]

@@ -2,12 +2,14 @@
 import './App.css';
 import SideBar from './components/SideBar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import DashbBoard from './pages/DashbBoard';
-import About from './pages/About';
-import Analytics from './pages/Analytics';
-import ProductList from './pages/ProductList';
-import Product from './pages/Product';
 import Comment from './pages/Comment'
+import Article from './pages/Article';
+import Login from './pages/Login';
+import Dossier from './pages/Dossier';
+import Logistique from './pages/Logistique';
+import Inventaire from './pages/Inventaire';
+import Historique from './pages/Historique';
+import Fournisseur from './pages/Fournisseur';
 
 function App() {
   
@@ -16,14 +18,14 @@ function App() {
       <BrowserRouter>
       <SideBar>
           <Routes>
-                <Route path='/' element={<DashbBoard />} />
-                <Route path='/dashboard' element={<DashbBoard />} />
-                <Route path='/about' element={<About />} />
+                <Route path='/' element={<Login />} />
+                <Route path='/article' element={<Article />} />
                 <Route path='/comment' element={<Comment />} />
-                <Route path='/analytics' element={<Analytics />} />
-                <Route path='/product' element={<Product />} />
-                <Route path='/productList' element={<ProductList />} />
-                <Route path='/ali' element={<ProductList />} />
+                <Route path='/dossier' element={<Dossier />} />
+                <Route path='/logistique' element={<Logistique />} />
+                <Route path='/historique' element={<Historique />} />
+                <Route path='/fournisseur' element={<Fournisseur />} />
+                <Route path='/inventaire' element={<Inventaire />} />    
           </Routes>
       </SideBar>
         

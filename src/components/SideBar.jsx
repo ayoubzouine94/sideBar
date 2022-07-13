@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import {FaTh,FaBars,FaShoppingCart ,FaUserAlt,FaRegChartBar,FaThList,FaCommentAlt} from 'react-icons/fa';
 import {NavLink} from 'react-router-dom';
 
-const SideBar = ( {children}) => {
+const SideBar = ({children}) => {
     const[isOpen, setIsopen] = useState(false);
     const toggle = () =>setIsopen(!isOpen)
     const menuItems=[

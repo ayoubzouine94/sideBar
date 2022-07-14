@@ -1,53 +1,12 @@
 import React,{useState} from 'react';
-import {FaTh,FaBars} from 'react-icons/fa';
-import {RiArticleFill,RiFolder4Fill} from 'react-icons/ri';
-import {MdImportExport,MdInventory2} from 'react-icons/md';
-import {GiHistogram} from 'react-icons/gi';
-import {BiImport} from 'react-icons/bi';
+import {FaBars} from 'react-icons/fa';
 import {NavLink} from 'react-router-dom';
+import {menuItems} from './Sidebardata';
 
 const SideBar = ({children}) => {
     const[isOpen, setIsopen] = useState(true);
     const toggle = () =>setIsopen(!isOpen)
-    const menuItems=[
-        {
-            path:'/',
-            name:'Login',
-            icon:<FaTh />,
-        },
-       
-        {
-            path:'/article',
-            name:'Article',
-            icon:<RiArticleFill />
-        },
-        {
-            path:'/dossier',
-            name:'Dossier',
-            icon:<RiFolder4Fill />
-        },
-        {
-            path:'/logistique',
-            name:'Logistique',
-            icon:<MdImportExport />
-        },
-        {
-            path:'/fournisseur',
-            name:'Fournisseur',
-            icon:<BiImport />
-        },
-        {
-            path:'/inventaire',
-            name:'Inventaire',
-            icon:<MdInventory2 />
-        },
-        {
-            path:'/historique',
-            name:'Historique',
-            icon:<GiHistogram />
-        },
-        
-    ]
+
   return (
     <div className='container'>
         <div style={{width: isOpen ? "250px" :"50px"}} className="sidebar">

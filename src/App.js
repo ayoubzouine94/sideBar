@@ -9,7 +9,7 @@ import Logistique from './pages/logistique/Logistique';
 import Inventaire from './pages/inventaire/Inventaire';
 import Historique from './pages/historique/Historique';
 import Fournisseur from './pages/fournisseur/Fournisseur';
-import Footer from './components/Footer';
+import Footer from './components/footer/Footer';
 import Client from './pages/client/Client';
 
 function App() {
